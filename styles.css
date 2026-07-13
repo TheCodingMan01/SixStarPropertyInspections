@@ -115,8 +115,8 @@ section[id] { scroll-margin-top: 122px; }
 .services-grid a span { float: right; font-size: 18px; }
 
 .why { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 810px; background: var(--navy); }
-.why__image { position: relative; min-height: 760px; overflow: hidden; }
-.why__image img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; }
+.why__image { position: relative; min-height: 760px; display: grid; place-items: center; overflow: hidden; background: radial-gradient(circle at 50% 38%, #173852 0%, #0a2138 58%, #061321 100%); }
+.why__image img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; transform: scale(.9); box-shadow: 0 24px 60px rgba(0,0,0,.3); }
 .why__image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,24,42,.08), rgba(9,24,42,.35)); }
 .image-badge { position: absolute; z-index: 2; left: 0; bottom: 0; width: 270px; padding: 28px 34px; display: grid; gap: 5px; background: var(--aqua); color: #041321; }
 .image-badge strong { font-family: Georgia, serif; font-size: 24px; font-weight: 400; }

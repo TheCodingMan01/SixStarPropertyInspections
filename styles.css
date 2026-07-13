@@ -186,8 +186,11 @@ blockquote cite { grid-column: 2; color: #91a2b2; font-size: 9px; font-style: no
 .contact__form textarea { padding: 14px; border: 1px solid #b9c7d2; resize: vertical; }
 .contact__form input:focus, .contact__form textarea:focus { border-color: #079fbe; box-shadow: 0 1px 0 #079fbe; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.form-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .contact__form button { width: 100%; padding: 18px 22px; display: flex; justify-content: space-between; color: #03121f; background: var(--aqua); border: 0; cursor: pointer; font-size: 12px; font-weight: 800; transition: .25s ease; }
 .contact__form button:hover { background: #82edff; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(21,199,230,.22); }
+.contact__form .button--email-app { color: #0a5670; background: white; border: 1px solid #86bac6; }
+.contact__form .button--email-app:hover { color: #03121f; background: #dff7fb; border-color: #079fbe; }
 .form-note { margin: 12px 0 0; color: #82909c; font-size: 9px; line-height: 1.5; text-align: center; }
 
 footer { padding: 70px clamp(24px,8vw,130px) 30px; display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 35px; background: #030b13; border-top: 1px solid rgba(255,255,255,.12); }
@@ -252,6 +255,7 @@ footer > div { grid-column: 1 / -1; padding-top: 24px; display: flex; justify-co
   .process__steps article::after { right: 50%; top: auto; bottom: -12px; transform: translateX(50%) rotate(90deg); }
   .contact__aside, .contact__form { padding: 70px 22px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
+  .form-actions { grid-template-columns: 1fr; }
   .form-heading { align-items: start; gap: 6px; flex-direction: column; }
   .contact-link strong { font-size: 15px; }
   footer { padding: 55px 22px 25px; grid-template-columns: 1fr; }

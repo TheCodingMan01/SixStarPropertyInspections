@@ -10,7 +10,15 @@ form.addEventListener('submit', (event) => {
   const message = String(data.get('message') || 'I would like to request an inspection quote.').trim();
   const subject = encodeURIComponent(`Property inspection enquiry from ${name}`);
   const body = encodeURIComponent(`Hi Brett,\n\n${message}\n\nName: ${name}\nPhone: ${phone}\nReply email: ${replyEmail}\nProperty suburb/address: ${property}\n\nSent from the Six Star Property Inspections website.`);
-  window.location.href = `mailto:brett.sixstar@gmail.com?subject=${subject}&body=${body}`;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=brett.sixstar@gmail.com&su=${subject}&body=${body}`;
+  const mailtoUrl = `mailto:brett.sixstar@gmail.com?subject=${subject}&body=${body}`;
+
+  if (event.submitter?.value === 'gmail') {
+    window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    return;
+  }
+
+  window.location.href = mailtoUrl;
 });
 
 document.querySelector('#copyright').textContent = `© ${new Date().getFullYear()} Six Star Property Inspections`;
